@@ -29,16 +29,20 @@ android {
         namespace "com.homex.open_mail_app" 
     }
 
-    compileSdkVersion 31
-
+    compileSdk 34
+    
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
     }
     lintOptions {
         disable 'InvalidPackage'
+    }
+    compileOptions {
+      sourceCompatibility JavaVersion.VERSION_1_8
+      targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
